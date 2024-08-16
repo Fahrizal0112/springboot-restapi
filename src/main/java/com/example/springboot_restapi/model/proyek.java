@@ -1,0 +1,42 @@
+package com.example.springboot_restapi.model;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "proyek")
+public class proyek {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "nama_proyek", nullable = false)
+    private String namaProyek;
+
+    @Column(name = "client", nullable = false)
+    private String client;
+
+    @Column(name = "tgl_mulai", nullable = false)
+    private LocalDateTime tglMulai;
+
+    @Column(name = "tgl_selesai", nullable = false)
+    private LocalDateTime tglSelesai;
+
+    @Column(name = "pimpinan_proyek", nullable = false)
+    private String pimpinan;
+
+    @Lob
+    @Column(name = "keterangan", nullable = false)
+    private String keterangan;
+
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private LocalDateTime createdAt;
+
+}
