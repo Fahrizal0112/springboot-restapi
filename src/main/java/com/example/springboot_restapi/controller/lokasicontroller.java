@@ -17,11 +17,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
-
-
 @RestController
 @RequestMapping("/lokasi")
-public class lokasicontroller {
+public class LokasiController {
 
     @Autowired
     private lokasirepository lokasirepository;
