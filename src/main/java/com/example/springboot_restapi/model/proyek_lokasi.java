@@ -6,10 +6,10 @@ import jakarta.persistence.ManyToOne;
 public class proyek_lokasi {
     @ManyToOne
     @JoinColumn(name = "proyek_id", nullable = false)
-    private proyek Proyek;
+    private Proyek Proyek;
 
     @ManyToOne
     @JoinColumn(name = "lokasi_id", nullable = false)
-    private lokasi Lokasi;
+    private Lokasi Lokasi;
 
 }
