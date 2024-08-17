@@ -45,7 +45,7 @@ public class LokasiController {
             lokasi.setProvinsi(lokasiDetails.getProvinsi());
             lokasi.setKota(lokasiDetails.getKota());
             return lokasirepository.save(lokasi);
-        }
+        } 
 
         return null;
     }
